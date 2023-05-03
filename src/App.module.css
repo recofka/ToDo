@@ -1,0 +1,11 @@
+#root {
+  max-width: 1440px;
+  padding: 2rem;
+}
+
+.wrapper {
+  width: 100%;
+  background: var(--gray-600);
+  height: 100vh;
+  padding: 1rem;
+}
