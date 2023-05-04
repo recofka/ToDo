@@ -4,8 +4,16 @@
 }
 
 .wrapper {
-  width: 100%;
-  background: var(--gray-600);
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 39.5rem;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }

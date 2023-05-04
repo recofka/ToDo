@@ -1,6 +1,6 @@
 .counters {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   color: var(--purple-300);
   font-weight: 700;
   font-size: 0.875rem;
@@ -15,7 +15,7 @@
 .counters span {
   border-radius: 999px;
   padding: 2px 8px;
-  margin: 0 0.5rem;
+  margin-left: 0.5rem;
   background: var(--gray-400);
   color: var(--gray-200);
 }
@@ -26,12 +26,13 @@
 }
 
 .listItem {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1rem auto 1rem;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 46rem;
   max-height: 4.5rem;
+  width: 100%;
   margin-bottom: 0.75rem;
   background: var(--gray-400);
   border: 1px solid var(--gray-400);
@@ -45,6 +46,10 @@
 
 .listItem label {
   padding: 0.5rem;
+}
+
+.listItem[data-iscomplete='true'] {
+  text-decoration: line-through;
 }
 
 .listItem input[type='checkbox'] {
@@ -87,6 +92,11 @@
   bottom: 30%;
 }
 
+.listItem input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .listItem button {
   background: transparent;
   outline: none;
@@ -96,4 +106,17 @@
 
 .listItem button:hover {
   color: var(--red-500);
+}
+
+.listEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  color: var(--gray-300);
+}
+
+.listEmpty p {
+  padding: 0.2rem;
 }
